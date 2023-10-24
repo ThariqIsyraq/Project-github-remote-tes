@@ -1,3 +1,20 @@
+/* 
+1. Desktop/Laptop Computers:
+Average Screen Width: 1366 pixels to 1920 pixels
+Average Screen Height: 768 pixels to 1080 pixels
+
+2. Tablets:
+Average Screen Width: 768 pixels to 1024 pixels
+Average Screen Height: 1024 pixels to 2048 pixels
+
+3. Smartphones:
+Average Screen Width: 320 pixels to 480 pixels
+Average Screen Height: 480 pixels to 800 pixels
+
+Please note that these are approximate ranges and can vary depending on the specific device and its orientation (landscape or portrait). Additionally, newer devices with higher resolutions and different aspect ratios are continually being introduced to the market, so it's essential to consider responsive design techniques to accommodate a wide range of screen sizes and resolutions.
+If you are designing a website or application, it's recommended to use responsive design practices, such as utilizing media queries and fluid layouts, to adapt your content and user interface to different screen sizes and resolutions. This approach helps ensure optimal user experience across various devices.
+*/
+
 * {
     font-family: poppins, Arial, Helvetica, sans-serif;
     margin: 0;
@@ -8,26 +25,46 @@
     list-style-type: none;
 }
 
-body {
-    background-color: rgb(166, 88, 197);
-}
+
+/* smartphone */
+@media (max-width: 480px) {
 
 .navbar {
-    background-color: white;
     display: flex;
     width: 100%;
-    height: 70px;
-    align-items: center;
+    height: 45px;
     padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.455);
+    }
+
+    .logo-container  {
+    display: flex;
+    font-size: 9px;
+    }
+
+    div {
+    border: 1px solid black;
+        }
+
+    .logo-navbar {
+    width: 30px;
+    height: 30px;
+    }
+
+    .navbar h4 {
+    /* color: rgb(67, 67, 190); */
+    color: rgb(97, 97, 196);
+    font-weight: 600;
+    }
+
+    .navbar h2 {
+    font-weight: 800;
+    }
+
 }
 
-.logo-navbar {
-    margin-left: 10px;
-    width: 60px;
-    height: 60px;
-}
 
-.navbar h2 {
-    font-weight: 700;
-    margin-left: 10px;
-}
+
