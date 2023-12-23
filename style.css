@@ -1,70 +1,226 @@
 /* 
-1. Desktop/Laptop Computers:
-Average Screen Width: 1366 pixels to 1920 pixels
-Average Screen Height: 768 pixels to 1080 pixels
-
-2. Tablets:
-Average Screen Width: 768 pixels to 1024 pixels
-Average Screen Height: 1024 pixels to 2048 pixels
-
-3. Smartphones:
-Average Screen Width: 320 pixels to 480 pixels
-Average Screen Height: 480 pixels to 800 pixels
-
-Please note that these are approximate ranges and can vary depending on the specific device and its orientation (landscape or portrait). Additionally, newer devices with higher resolutions and different aspect ratios are continually being introduced to the market, so it's essential to consider responsive design techniques to accommodate a wide range of screen sizes and resolutions.
-If you are designing a website or application, it's recommended to use responsive design practices, such as utilizing media queries and fluid layouts, to adapt your content and user interface to different screen sizes and resolutions. This approach helps ensure optimal user experience across various devices.
+color: 
+#0F0F0F; darker
+#005B41; more bright
+#232D3F; too bright
+#008170; brighter
 */
 
 * {
-    font-family: poppins, Arial, Helvetica, sans-serif;
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    outline: none;
     border: none;
+    font-family: poppins , Arial, Helvetica, sans-serif;
     text-decoration: none;
     list-style-type: none;
 }
 
+body {
+    font-family: poppins , Arial, Helvetica, sans-serif;
+    height: 2000vh;
+}
 
-/* smartphone */
-@media (max-width: 480px) {
+/* navbar start */
 
-.navbar {
-    display: flex;
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #008170;
     width: 100%;
-    height: 45px;
-    padding: 16px;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 100px;
+    box-shadow: 1px 6px 8px 1px rgba(97, 97, 97, 0.151);
+}
+
+nav .container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.455);
-    }
+}
 
-    .logo-container  {
+.container a img {
+    width: 40%;
+}
+
+.ul-navbar {
     display: flex;
-    font-size: 9px;
-    }
+}
 
-    div {
-    border: 1px solid black;
-        }
-
-    .logo-navbar {
-    width: 30px;
-    height: 30px;
-    }
-
-    .navbar h4 {
-    /* color: rgb(67, 67, 190); */
-    color: rgb(97, 97, 196);
+.ul-navbar li {
+    margin: 12px;
+    font-size: 20px;
     font-weight: 600;
-    }
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 2px 2px rgba(80, 80, 80, 0.738);
+}
 
-    .navbar h2 {
-    font-weight: 800;
-    }
+.search-bar input {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 12px;
+    width: 15em;
+    height: 40px;
+    color: black;
+    border: 1px solid rgba(66, 65, 65, 0.519);
+}
 
+::placeholder {
+    color: black;
+    font-weight: 500;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+}
+
+.button button {
+    cursor: pointer;
+    font-weight: 500;
+    background-color: white;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(56, 56, 56, 0.519);
+}
+
+/* navbar end */
+
+/* content start */
+
+.main-content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(227, 226, 226);
+    margin-top: 100px;
+}
+
+.image-container,
+.text-container {
+    width: 50%; 
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.text-container h1 {
+    color: rgb(215, 124, 74);
+    font-size: 50px;
+}
+
+.text-container h2 {
+    width: 70%;
 }
 
 
+.me {
+    width: 100%;
+    height: 100.8vh;
+    object-fit: cover;
+}
 
+.main-btn {
+    background-color: rgb(215, 124, 74);
+    color: rgb(237, 237, 237);
+    padding: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+/* content end */
+
+/* content 2 start */
+
+.title-2 {
+    padding: 20px;
+    margin: 40px;
+    text-align: center;
+}
+
+.container-main2 {
+    width: 100%;
+}
+
+.pic-main2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic-main2 img {
+    width: 400px;
+    margin: 20px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+/* content 2 end */
+
+/* content 3 start */
+
+.pic-main3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic-main3 div {
+    width: 450px;
+    height: 500px;
+    margin: 12px;
+}
+
+.pic-main3 img {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* content 3 end */
+
+/* footer start */
+
+.footer-container {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    margin-top: 40px;
+    color: white;
+    background-color:#0F0F0F;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.socmed1 {
+    cursor: pointer;
+}
+
+.footer-container a {
+    text-decoration: underline;
+    color: white;
+    
+}
+
+/* footer end */
